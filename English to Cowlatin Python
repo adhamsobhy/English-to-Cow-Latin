@@ -1,0 +1,12 @@
+def cow_latinify_sentence(string):
+    """English to cow latin"""
+    consonants = "bcdfghjklmnpqrstvwxyz"
+    string = string.split()
+    for i in range(len(string)):
+        if string[i][0] in consonants or string[i][0] in consonants.upper():
+            string[i] = string[i][1:] + string[i][0]
+            string[i] += 'oo'
+        else:
+            string[i] += "moo"
+    string = ' '.join(string)
+    return string.lower()
